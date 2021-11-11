@@ -1,3 +1,8 @@
+"use strict";
+exports.__esModule = true;
+var faker_1 = require("faker");
+var name = faker_1["default"].name.firstName();
+console.log(name);
 var Player = /** @class */ (function () {
     function Player(name, position, age, price, skills, status) {
         this.name = name;
@@ -83,3 +88,11 @@ var championLeague = new League();
 championLeague.addTeam(shakhtar);
 // championLeague.showTeams();
 championLeague.getTeamByName("Shachtar");
+function createRandomUser(countUsers) {
+    var randomUsers;
+    for (var i = 0; i < countUsers; i++) {
+        var newUser = new Player("asd", Math.random().toString(), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), { speed: 40, technique: 45, hp: 80 }, Math.random().toString());
+        console.log(newUser);
+    }
+}
+createRandomUser(10);

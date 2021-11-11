@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/faker": "^5.5.9",
+    "faker": "^5.5.3",
+    "unique-names-generator": "^4.6.0"
+  }
+}

@@ -1,3 +1,8 @@
+import fakerStatic from "faker";
+
+const name: string = fakerStatic.name.firstName();
+console.log(name);
+
 interface ISkills {
   speed: number;
   technique: number;
@@ -106,3 +111,20 @@ championLeague.addTeam(shakhtar);
 // championLeague.showTeams();
 
 championLeague.getTeamByName("Shachtar");
+
+function createRandomUser(countUsers: number) {
+  let randomUsers: Player[];
+  for (let i: number = 0; i < countUsers; i++) {
+    let newUser = new Player(
+      "asd",
+      Math.random().toString(),
+      Math.floor(Math.random() * 100),
+      Math.floor(Math.random() * 100),
+      { speed: 40, technique: 45, hp: 80 },
+      Math.random().toString()
+    );
+    console.log(newUser);
+  }
+}
+
+createRandomUser(10);
